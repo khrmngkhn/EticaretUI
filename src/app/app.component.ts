@@ -10,14 +10,7 @@ declare var $:any
 })
 export class AppComponent {
   title = 'EticaretUI';
-  constructor(private toastrService:CustomToastrService){
-    this.toastrService.message('Hello world!', 'Toastr fun!',{
-      messageType:ToastrMessageType.Info,
-      position:ToastrPosition.TopCenter
-    });
- 
-
-  }
+  constructor(){  }
 
 
 }
