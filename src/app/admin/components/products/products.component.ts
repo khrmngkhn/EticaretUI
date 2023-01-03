@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
-import { Product } from 'src/app/contracts/product';
+import { Create_Product } from 'src/app/contracts/create_product';
 import { HttpClientService } from 'src/app/services/common/http-client.service';
 
 @Component({
@@ -16,10 +16,10 @@ export class ProductsComponent extends BaseComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.showSpinner(SpinnerType.SquareJjellyBox);
-    this.httpClientService.get<Product[]>({
-      controller:"products"
-    }).subscribe(data=>console.log(data));
+    // this.showSpinner(SpinnerType.SquareJjellyBox);
+    // this.httpClientService.get<Create_Product[]>({
+    //   controller:"products"
+    // }).subscribe(data=>console.log(data));
 
     // this.httpClientService.post({
     //   controller:"products"
@@ -44,7 +44,7 @@ export class ProductsComponent extends BaseComponent implements OnInit {
 
 
     // this.httpClientService.get({baseUrl:"https://jsonplaceholder.typicode.com",controller:"posts"}).subscribe(data=>console.log(data))
-    this.httpClientService.get({fullEndPoint:"https://jsonplaceholder.typicode.com/posts"}).subscribe(data=>console.log(data))
+    //this.httpClientService.get({fullEndPoint:"https://jsonplaceholder.typicode.com/posts"}).subscribe(data=>console.log(data))
 
   }
 
