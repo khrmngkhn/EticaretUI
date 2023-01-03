@@ -42,6 +42,9 @@ export class ProductsComponent extends BaseComponent implements OnInit {
     // },"06609AB0-C68E-4876-9492-08DAED53BE35").subscribe();
 
 
+    // this.httpClientService.get({baseUrl:"https://jsonplaceholder.typicode.com",controller:"posts"}).subscribe(data=>console.log(data))
+    this.httpClientService.get({fullEndPoint:"https://jsonplaceholder.typicode.com/posts"}).subscribe(data=>console.log(data))
+
   }
 
 }
